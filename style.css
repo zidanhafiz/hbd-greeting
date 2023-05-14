@@ -1,0 +1,307 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Assistant", sans-serif;
+}
+
+.container {
+  width: 55%;
+  margin: auto;
+  padding: 5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.title h1 {
+  color: #121b2f;
+  text-align: center;
+  font-family: "Caveat", cursive;
+  font-weight: 800;
+}
+.title h1.top-title {
+  font-size: 48px;
+}
+.title h1.bot-title {
+  font-size: 40px;
+}
+
+.title:hover {
+  animation: tilt-n-move-shaking 0.25s infinite;
+}
+
+.letter {
+  color: #1c2a46;
+  width: 100%;
+  height: 230px;
+  margin: 50px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.paragraph {
+  text-align: center;
+  width: 600px;
+  animation: fadeIn 1.3s;
+}
+
+.paragraph h3 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 22px;
+}
+
+.paragraph p {
+  font-family: "Assistant", sans-serif;
+  font-size: 20px;
+}
+
+.paragraph:nth-child(1) {
+  animation: jump-shaking 1.5s 5;
+}
+
+.paragraph:nth-child(1):hover {
+  animation: none;
+}
+
+.paragraph:nth-child(27) {
+  animation: tilt-n-move-shaking 0.25s 5;
+}
+
+.nav-btn {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.nav-btn p {
+  font-size: 40px;
+  margin: 0 10%;
+  cursor: pointer;
+  color: #adadad;
+  transition: 0.3s;
+}
+.nav-btn p:hover {
+  color: #1f2f4d;
+}
+
+.anime-greet {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  padding-top: 7%;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(18, 27, 47, 0.7);
+  animation: fadeIn 1s;
+}
+
+.anime-greet .close-btn {
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.pict {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.anime-greet img {
+  width: 300px;
+}
+
+.anime-greet .ayaka .text {
+  width: 500px;
+  height: 150px;
+  background-color: #122142;
+  border-radius: 20px;
+  padding: 20px;
+  color: aliceblue;
+  border-style: solid;
+  border-width: 5px;
+  border-color: #3d5b98;
+}
+
+.anime-greet p {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.anime-greet p:nth-child(3) {
+  margin-top: 45px;
+  text-align: end;
+  font-size: 22px;
+  font-weight: 300;
+  font-family: "Caveat", cursive;
+}
+
+.anime-greet p:nth-child(4) {
+  text-align: end;
+  font-size: 18px;
+  font-weight: 300;
+  font-family: "Caveat", cursive;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+@keyframes tilt-n-move-shaking {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+  25% {
+    transform: translate(5px, 5px) rotate(5deg);
+  }
+  50% {
+    transform: translate(0, 0) rotate(0eg);
+  }
+  75% {
+    transform: translate(-5px, 5px) rotate(-5deg);
+  }
+  100% {
+    transform: translate(0, 0) rotate(0deg);
+  }
+}
+
+@keyframes jump-shaking {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateY(-9px);
+  }
+  35% {
+    transform: translateY(-9px) rotate(17deg);
+  }
+  55% {
+    transform: translateY(-9px) rotate(-17deg);
+  }
+  65% {
+    transform: translateY(-9px) rotate(17deg);
+  }
+  75% {
+    transform: translateY(-9px) rotate(-17deg);
+  }
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+/* Ballon */
+#balloon-container {
+  position: absolute;
+  z-index: 1;
+  height: 100vh;
+  padding: 1em;
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  overflow: hidden;
+  transition: opacity 500ms;
+}
+
+.balloon {
+  height: 125px;
+  width: 105px;
+  border-radius: 75% 75% 70% 70%;
+  position: relative;
+}
+
+.balloon:before {
+  content: "";
+  height: 75px;
+  width: 1px;
+  padding: 1px;
+  background-color: #fdfd96;
+  display: block;
+  position: absolute;
+  top: 125px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.balloon:after {
+  content: "▲";
+  text-align: center;
+  display: block;
+  position: absolute;
+  color: inherit;
+  top: 120px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@keyframes float {
+  from {
+    transform: translateY(100vh);
+    opacity: 1;
+  }
+  to {
+    transform: translateY(-300vh);
+    opacity: 0;
+  }
+}
+
+/* responsive design */
+@media screen and (max-width: 576px) {
+  .container {
+    width: 80%;
+    padding: 5em 1em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .nav-btn p {
+    margin: 0 20%;
+    font-size: 50px;
+  }
+
+  .anime-greet {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    padding-top: 50%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(18, 27, 47, 0.7);
+    animation: fadeIn 1s;
+  }
+
+  .anime-greet .ayaka {
+    width: 80%;
+    overflow: hidden;
+  }
+
+  .anime-greet img {
+    width: 70%;
+  }
+
+  .anime-greet .ayaka .text {
+    width: 100%;
+    height: fit-content;
+    box-sizing: border-box;
+  }
+
+  .anime-greet p {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
