@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Happy Birthday Akhza!</title>
+    <link rel="icon" type="image/x-icon" href="./src/happy-birthday.png" />
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
     <!-- google fonts -->
@@ -16,15 +17,27 @@
   </head>
   <body>
     <div id="balloon-container"></div>
+    <audio autoplay loop class="backsound">
+      <source src="./src/once-in-a-moon(edited).mp3" type="audio/mp3" />
+    </audio>
+    <div id="popup1" class="overlay">
+      <div class="blur"></div>
+      <div class="popup">
+        <h2>Hi, Akhza Fadhila Ishdiqana</h2>
+        <div class="content">Silahkan ketuk dimana saja untuk memulai 😊</div>
+        <audio class="backsound">
+          <source src="./src/once-in-a-moon.mp3" type="audio/mp3" />
+        </audio>
+      </div>
+    </div>
     <div class="container">
-      <audio autoplay src="./src/once in a moon by Sarah Kang lyric video_out_2.mp3" class="backsound"></audio>
       <div class="title">
         <h1 class="top-title">Happy Birthday!</h1>
         <h1 class="bot-title">Akhza Fadhila Ishdiqana</h1>
       </div>
 
       <div class="letter">
-        <div class="paragraph">
+        <div class="paragraph now">
           <h3>お誕生日おめでとう!</h3>
           <p>O-tanjoubi omedetou!</p>
         </div>

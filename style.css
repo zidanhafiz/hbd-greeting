@@ -4,6 +4,49 @@
   font-family: "Assistant", sans-serif;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #12213b;
+  transition: 1s;
+}
+
+.popup {
+  margin: 15% auto;
+  padding: 20px;
+  border-radius: 5px;
+  width: 80%;
+  position: relative;
+  text-align: center;
+  font-size: 3em;
+  transition: 0.5s;
+  animation: fadeIn 3s;
+}
+
+.popup:hover {
+  transform: skewY(-3deg);
+  cursor: pointer;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #fff;
+  transition: 0.5s;
+  font-family: "Caveat", Arial, sans-serif;
+}
+
+.popup .content {
+  margin-top: 20px;
+  font-size: 1.2rem;
+  max-height: 30%;
+  overflow: auto;
+  color: #fff;
+  transition: 0.5s;
+}
+
 .container {
   width: 55%;
   margin: auto;
@@ -18,15 +61,17 @@
   font-family: "Caveat", cursive;
   font-weight: 800;
 }
+
 .title h1.top-title {
   font-size: 48px;
 }
+
 .title h1.bot-title {
   font-size: 40px;
 }
 
 .title:hover {
-  animation: tilt-n-move-shaking 0.25s infinite;
+  animation: tilt-n-move-shaking 0.5s infinite;
 }
 
 .letter {
@@ -37,6 +82,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.hidden-fadeOut {
+  opacity: 0;
 }
 
 .hidden {
@@ -60,11 +109,7 @@
 }
 
 .paragraph:nth-child(1) {
-  animation: jump-shaking 1.5s 5;
-}
-
-.paragraph:nth-child(1):hover {
-  animation: none;
+  animation: jump-shaking 1.5s 3;
 }
 
 .paragraph:nth-child(27) {
@@ -85,6 +130,7 @@
   color: #adadad;
   transition: 0.3s;
 }
+
 .nav-btn p:hover {
   color: #1f2f4d;
 }
@@ -113,6 +159,7 @@
   justify-content: center;
   margin-bottom: 30px;
 }
+
 .anime-greet img {
   width: 300px;
 }
@@ -303,5 +350,9 @@
   .anime-greet p {
     font-size: 18px;
     font-weight: 300;
+  }
+
+  .hidden {
+    display: none;
   }
 }
