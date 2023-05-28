@@ -112,7 +112,7 @@
   animation: jump-shaking 1.5s 3;
 }
 
-.paragraph:nth-child(27) {
+.paragraph:nth-child(31) {
   animation: tilt-n-move-shaking 0.25s 5;
 }
 

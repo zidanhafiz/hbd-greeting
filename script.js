@@ -88,7 +88,7 @@ let j = 0;
 let k = 0;
 
 window.addEventListener("click", () => {
-  if (i >= 26) {
+  if (i >= 30) {
     j++;
     if (j < 2) {
       k = 1;
@@ -107,13 +107,13 @@ window.addEventListener("click", () => {
 });
 
 nextBtn.addEventListener("click", function () {
-  if (i < 26) {
+  if (i < 30) {
     paragraph[i].classList.toggle("hidden");
     paragraph[i].classList.toggle("now");
     i++;
     paragraph[i].classList.toggle("hidden");
     paragraph[i].classList.toggle("now");
-  } else if (i >= 26) {
+  } else if (i >= 30) {
     if (k === 0) {
       modal.innerHTML = animeGreet;
       audio.volume = 0.3;
